@@ -4,7 +4,7 @@
 
 namespace exceptions {
 
-class FigureException : public std::invalid_argument {
-    using invalid_argument::invalid_argument;
+class FigureException : public std::logic_error {
+    using logic_error::logic_error;
 };
 }

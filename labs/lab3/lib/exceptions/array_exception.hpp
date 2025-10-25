@@ -4,7 +4,7 @@
 
 namespace exceptions {
 
-class ArrayOutOfRange : public std::out_of_range {
-    using out_of_range::out_of_range;
+class ArrayOutOfRange : public std::range_error {
+    using range_error::range_error;
 };
 }
