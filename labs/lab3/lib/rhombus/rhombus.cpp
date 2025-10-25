@@ -44,14 +44,11 @@ Rhombus::operator double() const noexcept {
 }
 
 Point Rhombus::Center() const noexcept {
-    double x = 0;
-    double y = 0;
+    Point center;
     for (std::size_t i = 0; i < vertexCount; ++i) {
-        x += points_[i].x;
-        y += points_[i].y;
+        center += points_[i];
     }
-
-    return Point(x / 4, y / 4);
+    return 1.0 / vertexCount * center;
 }
 
 bool operator==(const Rhombus& first, const Rhombus& second) noexcept {
