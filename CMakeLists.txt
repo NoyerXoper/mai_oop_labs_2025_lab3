@@ -1,11 +1,15 @@
 cmake_minimum_required(VERSION 3.10)
 project(oop_labs)
+add_compile_options(-std=c++20)
 
-add_subdirectory(examples/lection00_01)
-add_subdirectory(examples/lection02_03)
-add_subdirectory(examples/lection04_05)
-add_subdirectory(examples/lection06_07)
-add_subdirectory(examples/lection08_09)
-add_subdirectory(examples/lection10_11)
-add_subdirectory(examples/lection12_13)
-add_subdirectory(examples/lection14_15)
+
+include(FetchContent)
+FetchContent_Declare(
+  googletest
+  GIT_REPOSITORY https://github.com/google/googletest.git
+  GIT_TAG v1.17.0
+)
+FetchContent_MakeAvailable(googletest)
+
+add_subdirectory(labs/lab3)
+
